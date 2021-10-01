@@ -12,13 +12,13 @@ type AuthContextType = {
   user: UserType| undefined;
   signInWithGoogle: () => Promise<void>;
 }
-type AuthContextProvider = {
-children: ReactNode
+type AuthContextProviderProps = {
+  children: ReactNode;
 }
 
 export const AuthContext = createContext({} as AuthContextType)
 
-export function AuthContextProvider(props:AuthContextProvider){
+export function AuthContextProvider(props:AuthContextProviderProps){
   const [user,setUser] = useState<UserType>()
   useEffect(() =>{
     const unsubscribe =  auth.onAuthStateChanged(user =>{
