@@ -20,10 +20,37 @@
     display: block;
     align-self: center;
     flex: 1;
+    max-width: 240px;
+    width: 100%;
     padding: 0 16px 0 12px;
-    width: 240px;
-    font-size:14px;
+    font-size:1.4rem;
     font-weight: 500;
   }
 }
+@media (max-width: 425px){
+  .room-code  span{
+    max-width:170px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px){
+  .room-code  span{
+    max-width:130px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 320px){
+  .room-code  span{
+    max-width:90px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+
 
